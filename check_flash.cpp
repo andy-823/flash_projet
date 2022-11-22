@@ -1,5 +1,5 @@
-#include "c:\name\cpp_projects\flash_project\check_flash.h"
-//#include "check_flash.h"
+//#include "c:\name\cpp_projects\flash_project\check_flash.h"
+#include "check_flash.h"
 
 #include <queue>
 #include <string>
