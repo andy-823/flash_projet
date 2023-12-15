@@ -30,7 +30,7 @@ void check_the_flash()
 {
 	// can use <bitset>
 	// setting byte template 10101010 and 01010101
-	for (int i = 0; i < sizeof(char); i++)
+	for (int i = 0; i < 8; i++)
 	{
 		if (i % 2 == 0)
 		{
@@ -86,6 +86,7 @@ void check_the_flash()
 
 	start_file_size -= start_file_size % min_file_size;
 
+	// formula created by 
 	size_t tree_depth;
 	// could be made in 1 stroke but it's very long
 	if (free_space / start_file_size < files_in_directory)
