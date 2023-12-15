@@ -240,7 +240,6 @@ void write_files(const vector<string>& folders_to_write, DWORD64 file_size, queu
 	cout << "Total number of clusters: " << TotalNumberOfClusters << "\n\n";
 	cout << "Progress: 0%\n";
 	
-	// idea of this algo was made by https://github.com/MathPerv
 	for (auto& folder : folders_to_write)
 	{
 		for (int file_number = 1; file_number <= files_in_directory && free_space >= file_size; file_number++)
@@ -303,6 +302,7 @@ void write_files(const vector<string>& folders_to_write, DWORD64 file_size, queu
 }
 
 // after this function imitation of file tree will be created on a disk
+// idea of this algo was made by https://github.com/MathPerv
 vector<string> initialize_file_tree(size_t depth, vector<string>& folders)
 {
 	// finding name which doesn't conflict with existing folder names
