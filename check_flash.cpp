@@ -86,7 +86,7 @@ void check_the_flash()
 
 	start_file_size -= start_file_size % min_file_size;
 
-	// formula created by 
+	// formula proposed by https://github.com/KVV2505
 	size_t tree_depth;
 	// could be made in 1 stroke but it's very long
 	if (free_space / start_file_size < files_in_directory)
@@ -239,7 +239,8 @@ void write_files(const vector<string>& folders_to_write, DWORD64 file_size, queu
 	cout << "Number of free clusters: " << NumberOfFreeClusters << "\n";
 	cout << "Total number of clusters: " << TotalNumberOfClusters << "\n\n";
 	cout << "Progress: 0%\n";
-
+	
+	// idea of this algo was made by https://github.com/MathPerv
 	for (auto& folder : folders_to_write)
 	{
 		for (int file_number = 1; file_number <= files_in_directory && free_space >= file_size; file_number++)
@@ -337,7 +338,7 @@ vector<string> initialize_file_tree(size_t depth, vector<string>& folders)
 	return lowest_folders;
 }
 
-
+// https://github.com/HtWwiY
 bool create_file(file& file)
 {
 	if (fs::exists(file.path))
